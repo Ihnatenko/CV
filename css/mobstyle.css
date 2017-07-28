@@ -1,0 +1,439 @@
+body
+{
+	margin: 0px;
+	font-size: 10px;
+}
+
+p
+{
+	margin: 0px;
+	font-family: 'open sans', sans-serif
+}
+
+#main
+{
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	padding: 150px 50px 50px;
+	background-image: url("../img/Fon_avatar.jpg");
+}
+
+#main .avatar
+{
+	width: 100%;
+}
+
+#main .avatar div
+{
+	background-image: url('../img/Avatar.png');
+	position: relative; 
+	padding: 50% 0;
+	width: 100%;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+.main_block
+{
+	width: 100%;
+	position: relative;
+}
+
+#main_info
+{
+	background-color: #f1f1f1;
+	padding: 50px 15%;
+	box-sizing: border-box;
+}
+
+#name
+{
+	font-weight: bold;
+	font-size: 3em;
+	color: #182153;
+	line-height: 1.4em;
+}
+
+#job
+{
+	font-weight: bold;
+	font-size: 1.4em;
+    color: #182153;
+	line-height: 1.4em;
+}
+
+.contacts
+{
+	padding: 0;
+	font-family: 'open sans', sans-serif
+}
+
+.contacts li:nth-child(2n+1)
+{
+	font-weight: bold;
+	font-size: 1.4em;
+    color: #182153;
+	line-height: 1.4em;
+	margin-top: 1em;
+}
+
+.contacts li:nth-child(2n)
+{
+	font-weight: normal;
+	font-size: 1.4em;
+    color: #182153;
+	line-height: 1.4em;
+}
+
+#about_me
+{
+	background-color: #f1f1f1;
+	height: 300px;
+	text-align: center;
+	padding-top: 1px;
+	font-family: 'open sans',sans-serif;
+    color: #182153;
+	
+}
+
+#about_me p:first-child
+{
+	font-size: 3em;
+	font-weight: bold;
+	margin-top: 120px;
+}
+
+#about_me p:nth-child(2)
+{
+	font-size: 1.8em;
+	margin-top: 1em;
+}
+
+.info
+{
+	color: #182153;
+	text-align: center;
+	position: relative;
+}
+
+.info_title
+{
+	height: 100px;
+	border-top: 1px solid #f1f1f1;
+	border-bottom: 1px solid #f1f1f1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info_title p:first-child
+{
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+}
+
+.info_block
+{
+	padding: 60px 50px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.info_block p
+{
+	letter-spacing: 0.2em;	
+}
+
+.info_tab p:first-child
+{
+	font: normal normal bold 1.4em 'open sans',sans-serif;
+	line-height: 1.8em;
+}
+
+.info_tab p:nth-child(2)
+{
+	font: normal normal normal 1.4em 'open sans',sans-serif;
+}
+
+.info_tab
+{
+	text-align: left;
+	width: calc(100% - 30px);
+}
+
+.info_tab p:nth-child(3)
+{
+	font: normal normal normal 1.4em 'open sans',sans-serif;
+	padding: 0.4em 0;
+}
+
+.info_tab p:last-child
+{
+	font: normal normal normal 1.4em 'open sans',sans-serif;
+	letter-spacing: normal;
+	max-width: 300px;
+	margin-bottom: 50px;
+}
+
+.point
+{
+	width: 30px;
+	height: 20px;
+}
+
+.point > div
+{
+	border: 3px solid #182153;
+	border-radius: 50%;
+	margin: 0.7em 0;
+	width: 0px
+}
+
+#works .info_tab
+{
+	width: 100%;
+}
+
+.imag
+{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.imag > div
+{
+	position: relative; 
+	padding: 40% 0;
+	width: 100%;
+	background-position: center center;
+	background-size: cover;
+}
+
+.imag a
+{
+	position: absolute;
+	height: 100%; 
+	display: block;
+	width: 100%;
+	top: 0;
+	left: 0;
+	
+}
+
+#skills .info_title
+{
+	background-color: #182153;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+
+}
+
+.skills_block
+{
+	padding: 40px 0;
+	position: relative;
+	background-image: url("../img/Fon_skills.jpg");
+	background-size: cover;
+	background-color: rgba(24, 33, 83, 1);
+	background-position: center bottom;
+}
+
+.skills_tab
+{
+	width: 80%;
+	height: 70px;
+	margin: 5px;
+	background-color: rgba(255, 255, 255, 0.15);
+	padding: 2.8em 0;
+	box-sizing: border-box;
+}
+
+.skills_tab p
+{
+	width: 100%;
+	color: #ffffff;
+	font: normal normal bold 1.4em 'open sans',sans-serif;
+	letter-spacing: 0.2em;
+	margin: auto;
+}
+
+.flex-container
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	max-width: 950px;
+	margin: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.transparent_blue
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(24, 33, 83, 0.75);
+	top: 0;
+	z-index: 0;
+}
+
+#contacts
+{
+	background-color: #f1f1f1;
+	color: #182153;
+}
+
+#contacts .info_title
+{
+	border-bottom: 1px solid #ffffff;
+}
+
+#contact_data
+{
+	margin: auto;
+	width: 230px;
+	border-left: 1px solid #ffffff;
+	padding: 2em;
+}
+
+footer
+{
+	font: 1.4em 'open sans',sans-serif;
+    color: #2F2E2E;
+	padding: 2em;
+}
+
+header
+{
+	width: 100%;
+	background-color: #ffffff;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: #182153;
+	height: 100px;
+	
+}
+
+header > p
+{
+	font-size: 2.4em;
+	color: #182153;
+	transition: color 0.4s ease-in-out 0s;
+	padding: 0 40px;
+	margin: auto 0px;
+}
+
+header > p:hover
+{
+	color: #DBDDEC;
+	cursor: pointer;
+}
+
+header ul
+{
+	margin: 0;
+
+}
+
+header li
+{
+	display: inline;
+	line-height: 100px;
+	font-size: 1.4em;
+	font-family: 'open sans',sans-serif;
+	padding: 0 10px;
+	transition: color 0.4s ease-in-out 0s;
+	cursor: pointer;
+}
+
+header li:hover
+{
+	color: #DBDDEC;
+}
+
+.goTop
+{
+	width: 40px;
+	height: 40px;
+	background-color: rgba(24, 33, 83, 0.75);
+	background-image: url("../img/arrows_top.png");
+	background-position: 10px 10px;
+	background-size: auto;
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 70%;
+	right: 0;
+	border: 1px solid rgba(24, 33, 83, 0.8);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s linear 0s;
+}
+
+nav
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: #ffffff;
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.2s linear 0s;
+}
+
+nav ul
+{
+	padding: 0;
+	margin: auto;
+}
+
+nav li
+{
+	padding: 20px 0px;
+	text-align: center;
+	cursor: pointer;
+	font: normal normal normal 1.4em 'open sans',sans-serif;
+	letter-spacing: 0.2em;
+}
+
+.bt_menu
+{
+	width: 4em;
+	height: 4em;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	background-color: #182153;
+	z-index: 11;
+	border-radius: 50%;
+	display: flex;
+	transition: background-color 0.2s linear 0s;
+}
+
+.bt_menu img
+{
+/* 	background-image: url("../img/arrows_top.png"); */
+/* 	background-position: 10px 10px;
+	background-size: auto;
+	background-repeat: no-repeat; */
+	width: 20px;
+	margin: auto;
+	height: 19px;
+	transition: height 0.1s linear 0s;
+}
