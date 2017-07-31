@@ -1,18 +1,8 @@
 
 setTimeout(function(){
-	$("#main img").animate({opacity: "1", margin: "0px"}, 3000);
+	$("#main img").css({"opacity": "1", "margin": "0px"});
+	$("#main_info").css({"opacity": "1", "margin": "0px"});
 }, 500);
-
-setTimeout(function(){
-	$("#main_info").animate({opacity: "1", margin: "0px"}, 3000);
-}, 500);
-
-
-
-
-
-
-
 
 // обработчик для меню: плавне переміщення по пунктам сайта
 $("header li").click(function(event){
