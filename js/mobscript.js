@@ -1,13 +1,15 @@
+var timerGoTop;
 $(".goTop").click(function(){
 
 	var winScroll = document.body.scrollTop;
 	var step = winScroll/100;
 
-	timerId = setInterval(function(){
+	clearInterval(timerGoTop);
+	timerGoTop = setInterval(function(){
 		document.body.scrollTop -= step;
 		if(Math.abs(document.body.scrollTop) < Math.abs(step))
 		{
-			clearInterval(timerId);
+			clearInterval(timerGoTop);
 			document.body.scrollTop = 0;
 		}
 	}, 10);
@@ -63,11 +65,16 @@ $("nav li").click(function(event){
 	document.body.scrollTop = elem.offsetTop;
 });
 
+
+var timerScroll;
+
 window.onscroll = function() {
 	
 	$(".goTop").css({"opacity": "1", "visibility": "visible"});
 	
-	setTimeout(function(){
+	clearTimeout(timerScroll);
+	timerScroll = setTimeout(function(){
 		$(".goTop").css({"opacity": "0", "visibility": "hidden"});
 	}, 4000);
+	
 };
