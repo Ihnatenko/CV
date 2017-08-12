@@ -116,7 +116,7 @@ p
 {
 	font-size: 3em;
 	font-weight: bold;
-	margin-top: 120px;
+	margin-top: 1em;
 }
 
 #about_me p:nth-child(2)
@@ -310,19 +310,26 @@ p
 
 .skills_tab
 {
-	width: 410px;
+	width: calc(410px + 2em);
 	height: 70px;
 	margin: 5px;
+	display: flex;
 }
 
 .skills_tab > div
 {
-	width: 00px;
-	height: 14px;
+	width: 0px;
+	height: calc(70px - 2em);
 	background-color: rgba(255, 255, 255, 0.15);
 	overflow: hidden;
-	padding: 28px 0;
+	padding: 1em;
+	display: flex
 	
+}
+
+.skills_tab > div > div
+{
+	margin: auto;
 }
 
 .skills_tab p
@@ -331,7 +338,7 @@ p
 	color: #ffffff;
 	font: normal normal bold 1.4em 'open sans',sans-serif;
 	letter-spacing: 0.2em;
-	margin: auto;
+	
 }
 
 .flex-container

@@ -26,7 +26,7 @@ p
 
 #main .avatar div
 {
-	background-image: url('../img/Avatar.png');
+	background-image: url('../img/Avatar.jpg');
 	position: relative; 
 	padding: 50% 0;
 	width: 100%;
@@ -102,7 +102,7 @@ p
 {
 	font-size: 3em;
 	font-weight: bold;
-	margin-top: 120px;
+	margin-top: 1em;
 }
 
 #about_me p:nth-child(2)
@@ -252,8 +252,10 @@ p
 	height: 70px;
 	margin: 5px;
 	background-color: rgba(255, 255, 255, 0.15);
-	padding: 2.8em 0;
+	padding: 1em;
 	box-sizing: border-box;
+	
+	display: flex;
 }
 
 .skills_tab p
