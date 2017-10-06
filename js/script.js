@@ -4,12 +4,15 @@ setTimeout(function(){
 	$("#main_info").css({"opacity": "1", "margin": "0px"});
 }, 500);
 
+var timerId;
+
 // обработчик для меню: плавне переміщення по пунктам сайта
 $("header li").click(function(event){
-	
+
 	var elems = [experience, education, works, skills, contacts];
 	var elem = elems[event.target.getAttribute("data-num")];
 	menu_scroll(elem);
+	
 	
 	function menu_scroll(elem) {
 		var elemTop = elem.offsetTop - 100;
@@ -17,15 +20,20 @@ $("header li").click(function(event){
 		{
 			elemTop = document.body.clientHeight - document.documentElement.clientHeight;
 		}
-		var winScroll = document.body.scrollTop;
-		var step = (elemTop - winScroll)/100;
-
+		//var winScroll = document.body.scrollTop;
+		var step = (elemTop - window.pageYOffset)/100;
+		
+		clearInterval(timerId);
 		timerId = setInterval(function(){
-			document.body.scrollTop += step;
-			if(Math.abs(document.body.scrollTop - elemTop) < Math.abs(step))
+			window.scrollTo(0, window.pageYOffset + step);
+			console.log(timerId);
+			//document.body.scrollTop += step;
+			if(Math.abs(window.pageYOffset - elemTop) <= Math.abs(step))
 			{
 				clearInterval(timerId);
-				document.body.scrollTop = elemTop;
+				
+				//document.body.scrollTop = elemTop;
+				window.scrollTo(0, elemTop);
 			}
 		}, 10);
 			
@@ -37,15 +45,16 @@ $("header li").click(function(event){
 // обработчик для назви сайту: плавне переміщення на початок сайту
 $("header p").click(function(event){
 	
-	var winScroll = document.body.scrollTop;
-	var step = winScroll/100;
+	//var winScroll = document.body.scrollTop;
+	var step = window.pageYOffset/100;
 
 	timerId = setInterval(function(){
-		document.body.scrollTop -= step;
-		if(Math.abs(document.body.scrollTop) < Math.abs(step))
+		//document.body.scrollTop -= step;
+		window.scrollTo(0, window.pageYOffset - step);
+		if(Math.abs(window.pageYOffset) < Math.abs(step))
 		{
 			clearInterval(timerId);
-			document.body.scrollTop = 0;
+			window.scrollTo(0, 0);
 		}
 	}, 10);
 
@@ -62,7 +71,7 @@ window.onscroll = function() {
 					works.offsetTop - 110,
 					skills.offsetTop - 110,
 					document.body.clientHeight - document.documentElement.clientHeight];
-	var winScroll = document.body.scrollTop;
+	var winScroll = window.pageYOffset;
 	
 	switch(true)
 	{
@@ -109,7 +118,7 @@ window.onscroll = function() {
 	
 	function startAnimateElem(elem)
 	{
-		if((document.body.scrollTop + document.documentElement.clientHeight/2) > elem.offsetTop)
+		if((winScroll + document.documentElement.clientHeight/2) > elem.offsetTop)
 		{
 			$(elem).find(".info_tab_deckription").css({"left": "0px", "opacity": "1"});
 			$(elem).find(".info_tab_year").css({"right": "0px", "opacity": "1"});
@@ -120,7 +129,7 @@ window.onscroll = function() {
 	
 	
 	
-	if((document.body.scrollTop + document.documentElement.clientHeight/2) > skills.offsetTop)
+	if((winScroll + document.documentElement.clientHeight/2) > skills.offsetTop)
 	{
 		setTimeout(function(){$($(".skills_tab > div")[0]).animate({width: "410px"}, 1000);}, 100);
 		setTimeout(function(){$($(".skills_tab > div")[1]).animate({width: "410px"}, 1000);}, 400);

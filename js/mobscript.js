@@ -1,16 +1,18 @@
 var timerGoTop;
 $(".goTop").click(function(){
 
-	var winScroll = document.body.scrollTop;
-	var step = winScroll/100;
+	var step = window.pageYOffset/100;
 
 	clearInterval(timerGoTop);
 	timerGoTop = setInterval(function(){
-		document.body.scrollTop -= step;
-		if(Math.abs(document.body.scrollTop) < Math.abs(step))
+		window.scrollTo(0, window.pageYOffset - step);
+		console.log(step);
+		console.log(window.pageYOffset);
+		if(Math.abs(window.pageYOffset) <= Math.abs(step))
 		{
 			clearInterval(timerGoTop);
-			document.body.scrollTop = 0;
+			
+			window.scrollTo(0, 0);
 		}
 	}, 10);
 	
@@ -62,7 +64,7 @@ $("nav li").click(function(event){
 	
 	var elems = [experience, education, works, skills, contacts];
 	var elem = elems[event.target.getAttribute("data-num")];
-	document.body.scrollTop = elem.offsetTop;
+	window.scrollTo(0, elem.offsetTop);
 });
 
 
