@@ -36,11 +36,11 @@
 		<script>
 			if(isMobile.any())
 			{
-			  local_url = window.location.href.substr(0, window.location.href.length - 11);
-        document.location.replace(local_url + "/mobile.html");
+			  <!-- local_url = window.location.href.substr(0, window.location.href.length - 11); -->
+        document.location.replace("/mobile.html");
 			} else {
-				local_url = window.location.href.substr(0, window.location.href.length - 11);
-        document.location.replace(local_url + "/desktop.html");
+				<!-- local_url = window.location.href.substr(0, window.location.href.length - 11); -->
+        document.location.replace("/desktop.html");
 			}
 
 			function include(url) {
