@@ -11,11 +11,11 @@ $(".goTop").click(function(){
 		if(Math.abs(window.pageYOffset) <= Math.abs(step))
 		{
 			clearInterval(timerGoTop);
-			
+
 			window.scrollTo(0, 0);
 		}
 	}, 10);
-	
+
 });
 
 //Переключення кнопки включення меню
@@ -26,19 +26,19 @@ $(".bt_menu").toggle(
 		setTimeout(function(){
 			$("nav").css({"opacity": "1"});
 		}, 0);
-		
+
 		$(".bt_menu img").css({"height": "0%"});
 		$(".bt_menu").css({"background-color": "#aaaaaa"});
 		setTimeout(function(){
 			$(".bt_menu img").attr("src","img/arrows_down.png");
 			$(".bt_menu img").css({"height": "19px"});
 		}, 100);
-		
+
 		setTimeout(function(){
 			$("section").css({"display": "none"})
 		}, 200);
 	},
-	
+
 	function ()
 	{
 		$("section").css({"display": ""})
@@ -50,7 +50,7 @@ $(".bt_menu").toggle(
 		}, 0);
 
 		$(".bt_menu img").css({"height": "0%"});
-		$(".bt_menu").css({"background-color": "#182153"});	
+		$(".bt_menu").css({"background-color": "#182153"});
 		setTimeout(function(){
 			$(".bt_menu img").css({"height": "19"});
 			$(".bt_menu img").attr("src","img/arrows_top.png");
@@ -61,7 +61,7 @@ $(".bt_menu").toggle(
 $("nav li").click(function(event){
 	var click_event = new Event("click");
 	document.querySelector(".bt_menu").dispatchEvent(click_event);
-	
+
 	var elems = [experience, education, works, skills, contacts];
 	var elem = elems[event.target.getAttribute("data-num")];
 	window.scrollTo(0, elem.offsetTop);
@@ -71,12 +71,12 @@ $("nav li").click(function(event){
 var timerScroll;
 
 window.onscroll = function() {
-	
+
 	$(".goTop").css({"opacity": "1", "visibility": "visible"});
-	
+
 	clearTimeout(timerScroll);
 	timerScroll = setTimeout(function(){
 		$(".goTop").css({"opacity": "0", "visibility": "hidden"});
 	}, 4000);
-	
+
 };

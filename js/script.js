@@ -12,8 +12,8 @@ $("header li").click(function(event){
 	var elems = [experience, education, works, skills, contacts];
 	var elem = elems[event.target.getAttribute("data-num")];
 	menu_scroll(elem);
-	
-	
+
+
 	function menu_scroll(elem) {
 		var elemTop = elem.offsetTop - 100;
 		if((elemTop + document.documentElement.clientHeight) > document.body.clientHeight)
@@ -22,7 +22,7 @@ $("header li").click(function(event){
 		}
 		//var winScroll = document.body.scrollTop;
 		var step = (elemTop - window.pageYOffset)/100;
-		
+
 		clearInterval(timerId);
 		timerId = setInterval(function(){
 			window.scrollTo(0, window.pageYOffset + step);
@@ -31,20 +31,20 @@ $("header li").click(function(event){
 			if(Math.abs(window.pageYOffset - elemTop) <= Math.abs(step))
 			{
 				clearInterval(timerId);
-				
+
 				//document.body.scrollTop = elemTop;
 				window.scrollTo(0, elemTop);
 			}
 		}, 10);
-			
+
 		return(true);
 	};
-	
+
 });
 
 // обработчик для назви сайту: плавне переміщення на початок сайту
 $("header p").click(function(event){
-	
+
 	//var winScroll = document.body.scrollTop;
 	var step = window.pageYOffset/100;
 
@@ -58,12 +58,12 @@ $("header p").click(function(event){
 		}
 	}, 10);
 
-	
+
 });
 
 
 window.onscroll = function() {
-	
+
 	// обработчик для меню: зміна кольору пунктів при переміщенні по сайту
 	var elems = [experience, education, works, skills, contacts];
 	var elemsTop = [experience.offsetTop - 110,
@@ -72,7 +72,7 @@ window.onscroll = function() {
 					skills.offsetTop - 110,
 					document.body.clientHeight - document.documentElement.clientHeight];
 	var winScroll = window.pageYOffset;
-	
+
 	switch(true)
 	{
 		case (winScroll < elemsTop[0]):
@@ -99,8 +99,8 @@ window.onscroll = function() {
 			$($("header li")[4]).css({color: "#DBDDEC"});
 			break;
 	}
-	
-	
+
+
 	function backColor()
 	{
 		for(var i = 0;  i < 5; i++)
@@ -109,13 +109,13 @@ window.onscroll = function() {
 		}
 		return(true);
 	}
-	
+
 	//Виклик аніміцій
-	
+
 	startAnimateElem(experience);
 	startAnimateElem(education);
 	startAnimateElem(works);
-	
+
 	function startAnimateElem(elem)
 	{
 		if((winScroll + document.documentElement.clientHeight/2) > elem.offsetTop)
@@ -126,9 +126,9 @@ window.onscroll = function() {
 			$(elem).find(".point").css({"top": "0", "opacity": "1"});
 		}
 	}
-	
-	
-	
+
+
+
 	if((winScroll + document.documentElement.clientHeight/2) > skills.offsetTop)
 	{
 		setTimeout(function(){$($(".skills_tab > div")[0]).animate({width: "410px"}, 1000);}, 100);
@@ -137,21 +137,7 @@ window.onscroll = function() {
 		setTimeout(function(){$($(".skills_tab > div")[3]).animate({width: "410px"}, 1000);}, 600);
 		setTimeout(function(){$($(".skills_tab > div")[4]).animate({width: "410px"}, 1000);}, 500);
 		setTimeout(function(){$($(".skills_tab > div")[5]).animate({width: "410px"}, 1000);}, 800);
+		setTimeout(function(){$($(".skills_tab > div")[6]).animate({width: "410px"}, 1000);}, 900);
+		setTimeout(function(){$($(".skills_tab > div")[7]).animate({width: "410px"}, 1000);}, 700);
 	}
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -7,9 +7,9 @@
 		<title>CV</title>
 	</head>
 	<body>
-	
+
 		<script src="js/intro.js"></script>
-		
+
 		<script>
 		var isMobile = {
 			Android: function() {
@@ -32,13 +32,15 @@
 			}
 		};
 		</script>
-		
+
 		<script>
 			if(isMobile.any())
 			{
-				document.writeln(str_mobile);
+			  local_url = window.location.href.substr(0, window.location.href.length - 11);
+        document.location.replace(local_url + "/mobile.html");
 			} else {
-				document.writeln(str_desctop);
+				local_url = window.location.href.substr(0, window.location.href.length - 11);
+        document.location.replace(local_url + "/desktop.html");
 			}
 
 			function include(url) {
@@ -47,8 +49,6 @@
 				document.getElementsByTagName('head')[0].appendChild(script);
 			}
 		</script>
-		
+
 	</body>
 </html>
-
-
