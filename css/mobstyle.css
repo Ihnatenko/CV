@@ -4,13 +4,13 @@ body
 	font-size: 10px;
 }
 
-p
+.mob p
 {
 	margin: 0px;
 	font-family: 'open sans', sans-serif
 }
 
-#main
+.mob #main
 {
 	padding-top: 100px;
 	display: flex;
@@ -19,12 +19,12 @@ p
 	background-image: url("../img/Fon_avatar.jpg");
 }
 
-#main .avatar
+.mob #main .avatar
 {
 	width: 100%;
 }
 
-#main .avatar div
+.mob #main .avatar div
 {
 	background-image: url('../img/Avatar.jpg');
 	position: relative; 
@@ -35,20 +35,20 @@ p
 }
 
 
-.main_block
+.mob .main_block
 {
 	width: 100%;
 	position: relative;
 }
 
-#main_info
+.mob #main_info
 {
 	background-color: #f1f1f1;
 	padding: 50px 15%;
 	box-sizing: border-box;
 }
 
-#name
+.mob #name
 {
 	font-weight: bold;
 	font-size: 3em;
@@ -56,7 +56,7 @@ p
 	line-height: 1.4em;
 }
 
-#job
+.mob #job
 {
 	font-weight: bold;
 	font-size: 1.4em;
@@ -64,13 +64,13 @@ p
 	line-height: 1.4em;
 }
 
-.contacts
+.mob .contacts
 {
 	padding: 0;
 	font-family: 'open sans', sans-serif
 }
 
-.contacts li:nth-child(2n+1)
+.mob .contacts li:nth-child(2n+1)
 {
 	font-weight: bold;
 	font-size: 1.4em;
@@ -79,7 +79,7 @@ p
 	margin-top: 1em;
 }
 
-.contacts li:nth-child(2n)
+.mob .contacts li:nth-child(2n)
 {
 	font-weight: normal;
 	font-size: 1.4em;
@@ -87,7 +87,7 @@ p
 	line-height: 1.4em;
 }
 
-#about_me
+.mob #about_me
 {
 	background-color: #f1f1f1;
 	height: 300px;
@@ -98,27 +98,27 @@ p
 	
 }
 
-#about_me p:first-child
+.mob #about_me p:first-child
 {
 	font-size: 3em;
 	font-weight: bold;
 	margin-top: 1em;
 }
 
-#about_me p:nth-child(2)
+.mob #about_me p:nth-child(2)
 {
 	font-size: 1.8em;
 	margin-top: 1em;
 }
 
-.info
+.mob .info
 {
 	color: #182153;
 	text-align: center;
 	position: relative;
 }
 
-.info_title
+.mob .info_title
 {
 	height: 100px;
 	border-top: 1px solid #f1f1f1;
@@ -128,14 +128,14 @@ p
 	align-items: center;
 }
 
-.info_title p:first-child
+.mob .info_title p:first-child
 {
 	font-size: 2em;
 	font-weight: bold;
 	letter-spacing: 0.2em;
 }
 
-.info_block
+.mob .info_block
 {
 	padding: 60px 50px;
 	position: relative;
@@ -147,35 +147,35 @@ p
 	align-content: flex-start;
 }
 
-.info_block p
+.mob .info_block p
 {
 	letter-spacing: 0.2em;	
 }
 
-.info_tab p:first-child
+.mob .info_tab p:first-child
 {
 	font: normal normal bold 1.4em 'open sans',sans-serif;
 	line-height: 1.8em;
 }
 
-.info_tab p:nth-child(2)
+.mob .info_tab p:nth-child(2)
 {
 	font: normal normal normal 1.4em 'open sans',sans-serif;
 }
 
-.info_tab
+.mob .info_tab
 {
 	text-align: left;
 	width: calc(100% - 30px);
 }
 
-.info_tab p:nth-child(3)
+.mob .info_tab p:nth-child(3)
 {
 	font: normal normal normal 1.4em 'open sans',sans-serif;
 	padding: 0.4em 0;
 }
 
-.info_tab p:last-child
+.mob .info_tab p:last-child
 {
 	font: normal normal normal 1.4em 'open sans',sans-serif;
 	letter-spacing: normal;
@@ -183,13 +183,13 @@ p
 	margin-bottom: 50px;
 }
 
-.point
+.mob .point
 {
 	width: 30px;
 	height: 20px;
 }
 
-.point > div
+.mob .point > div
 {
 	border: 3px solid #182153;
 	border-radius: 50%;
@@ -197,18 +197,18 @@ p
 	width: 0px
 }
 
-#works .info_tab
+.mob #works .info_tab
 {
 	width: 100%;
 }
 
-.imag
+.mob .imag
 {
 	overflow: hidden;
 	margin-bottom: 20px;
 }
 
-.imag > div
+.mob .imag > div
 {
 	position: relative; 
 	padding: 40% 0;
@@ -217,7 +217,7 @@ p
 	background-size: cover;
 }
 
-.imag a
+.mob .imag a
 {
 	position: absolute;
 	height: 100%; 
@@ -225,10 +225,9 @@ p
 	width: 100%;
 	top: 0;
 	left: 0;
-	
 }
 
-#skills .info_title
+.mob #skills .info_title
 {
 	background-color: #182153;
 	color: #ffffff;
@@ -236,7 +235,7 @@ p
 
 }
 
-.skills_block
+.mob .skills_block
 {
 	padding: 40px 0;
 	position: relative;
@@ -246,7 +245,7 @@ p
 	background-position: center bottom;
 }
 
-.skills_tab
+.mob .skills_tab
 {
 	width: 80%;
 	height: 70px;
@@ -258,7 +257,7 @@ p
 	display: flex;
 }
 
-.skills_tab p
+.mob .skills_tab p
 {
 	width: 100%;
 	color: #ffffff;
@@ -267,7 +266,7 @@ p
 	margin: auto;
 }
 
-.flex-container
+.mob .flex-container
 {
 	display: flex;
 	flex-direction: row;
@@ -281,7 +280,7 @@ p
 	z-index: 1;
 }
 
-.transparent_blue
+.mob .transparent_blue
 {
 	position: absolute;
 	width: 100%;
@@ -291,18 +290,18 @@ p
 	z-index: 0;
 }
 
-#contacts
+.mob #contacts
 {
 	background-color: #f1f1f1;
 	color: #182153;
 }
 
-#contacts .info_title
+.mob #contacts .info_title
 {
 	border-bottom: 1px solid #ffffff;
 }
 
-#contact_data
+.mob #contact_data
 {
 	margin: auto;
 	width: 230px;
@@ -310,14 +309,14 @@ p
 	padding: 2em;
 }
 
-footer
+.mob footer
 {
 	font: 1.4em 'open sans',sans-serif;
     color: #2F2E2E;
 	padding: 2em;
 }
 
-header
+.mob header
 {
 	width: 100%;
 	background-color: #ffffff;
@@ -331,7 +330,7 @@ header
 	
 }
 
-header > p
+.mob header > p
 {
 	font-size: 2.4em;
 	color: #182153;
@@ -340,19 +339,19 @@ header > p
 	margin: auto 0px;
 }
 
-header > p:hover
+.mob header > p:hover
 {
 	color: #DBDDEC;
 	cursor: pointer;
 }
 
-header ul
+.mob header ul
 {
 	margin: 0;
 
 }
 
-header li
+.mob header li
 {
 	display: inline;
 	line-height: 100px;
@@ -363,12 +362,12 @@ header li
 	cursor: pointer;
 }
 
-header li:hover
+.mob header li:hover
 {
 	color: #DBDDEC;
 }
 
-.goTop
+.mob .goTop
 {
 	width: 40px;
 	height: 40px;
@@ -386,7 +385,7 @@ header li:hover
 	transition: all 1s linear 0s;
 }
 
-nav
+.mob nav
 {
 	position: fixed;
 	width: 100%;
@@ -399,13 +398,13 @@ nav
 	transition: opacity 0.2s linear 0s;
 }
 
-nav ul
+.mob nav ul
 {
 	padding: 0;
 	margin: auto;
 }
 
-nav li
+.mob nav li
 {
 	padding: 20px 0px;
 	text-align: center;
@@ -414,7 +413,7 @@ nav li
 	letter-spacing: 0.2em;
 }
 
-.bt_menu
+.mob .bt_menu
 {
 	width: 4em;
 	height: 4em;
@@ -428,7 +427,7 @@ nav li
 	transition: background-color 0.2s linear 0s;
 }
 
-.bt_menu img
+.mob .bt_menu img
 {
 /* 	background-image: url("../img/arrows_top.png"); */
 /* 	background-position: 10px 10px;
